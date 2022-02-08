@@ -1,4 +1,4 @@
-export const quadraticSolver = (a, b, c) => {
+export const quadraticSolver = (a = 0, b = 0, c = 0) => {
   if (a === 0)
     return false;
   const res = {};
