@@ -15,7 +15,6 @@ const options = commandLineArgs(optionDefinitions);
 
 
 const start = async () => {
-  throw 'Error to do revert commit';
   console.log('Quadratic solver');
   let data;
   try {
