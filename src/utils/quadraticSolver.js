@@ -4,7 +4,6 @@ export const quadraticSolver = (a, b, c) => {
   const res = {};
   res.roots = [];
   const D = b * b - 4 * a * c;
-  console.log('D = ' + D);
   if (D < 0)
     return false;
   res.discriminant = D;
