@@ -3,6 +3,7 @@ import readline from 'readline';
 import { stdin as input, stdout as output } from 'process';
 import { promiseQuestion } from '../utils/promiseQuestion';
 import { quadraticSolver } from '../utils/quadraticSolver';
+import { parseFromTxt } from '../utils/parseFromTxt';
 
 describe('promiseQuestion test', () => {
   test('Promise should return and data should be success', () => {
@@ -19,5 +20,12 @@ describe('quadraticSolver test', () => {
     expect(root1).toBe(0);
     expect(root2).toBe(-0.5);
     expect(quadraticSolver(1, 0, 12)).toBe(false);
+  });
+});
+
+describe('parseFromTxt test', () => {
+  test('Function should return valid result', async () => {
+    const data = await parseFromTxt('testFile');
+    expect(data).not.toBe('');
   });
 });
