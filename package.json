@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "SWM Lab1 ",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start:dev": "nodemon index.js",
     "test": "jest"
