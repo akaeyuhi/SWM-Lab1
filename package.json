@@ -1,0 +1,27 @@
+{
+  "name": "swm-lab1",
+  "version": "1.0.0",
+  "description": "SWM Lab1 ",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "nodemon index.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akaeyuhi/SWM-Lab1.git"
+  },
+  "author": "akaeyuhi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/akaeyuhi/SWM-Lab1/issues"
+  },
+  "homepage": "https://github.com/akaeyuhi/SWM-Lab1#readme",
+  "devDependencies": {
+    "jest": "^27.5.1",
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "command-line-args": "^5.2.1"
+  }
+}
