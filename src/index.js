@@ -22,7 +22,8 @@ const start = async () => {
       await nonInteractiveQuestion(path.resolve(__dirname, options.path)) :
       await question('Enter coefficients\n');
   } catch (e) {
-    return console.error(e);
+    console.error(e);
+    process.exit(0);
   }
   const [coef1, coef2, coef3] = data;
   console.log(`Your coefficients: ${data.join(' ')}
@@ -36,6 +37,7 @@ const start = async () => {
   } else {
     console.log('There is no roots.');
   }
+  process.exit(1);
 };
 
 (async () => await start())();
