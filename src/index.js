@@ -2,6 +2,12 @@ import commandLineArgs from 'command-line-args';
 import { nonInteractiveQuestion } from './utils/nonInteractiveQuestion.js';
 import { question } from './utils/question.js';
 import { quadraticSolver } from './utils/quadraticSolver.js';
+import * as path from 'path';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 const optionDefinitions = [
   { name: 'path', alias: 'p', type: String }
 ];
@@ -13,7 +19,7 @@ const start = async () => {
   let data;
   try {
     data = options.path ?
-      await nonInteractiveQuestion(options) :
+      await nonInteractiveQuestion(path.resolve(__dirname, options.path)) :
       await question('Enter coefficients\n');
   } catch (e) {
     return console.error(e);
